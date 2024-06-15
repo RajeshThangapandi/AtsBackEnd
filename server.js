@@ -5,17 +5,18 @@ const putReq = require('./methods/put-request');
 const deleteReq = require('./methods/delete-request');
 let movies = require('./data/movies.json');
 
-const PORT = process.env.PORT || 9090;
+const PORT = 5001;
 
 const server = http.createServer((req, res) => {
   // Set CORS headers
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Origin', 'https://rajeshthangapandi.github.io');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
 
   // Handle preflight request
   if (req.method === 'OPTIONS') {
-    res.writeHead(204);
+    res.writeHead(204); // No content
     res.end();
     return;
   }
