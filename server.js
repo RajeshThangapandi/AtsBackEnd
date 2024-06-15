@@ -6,10 +6,11 @@ const deleteReq = require('./methods/delete-request');
 let movies = require('./data/movies.json');
 
 const PORT = 5001;
+const allowedOrigin = 'https://rajeshthangapandi.github.io/'; // The correct origin
 
 const server = http.createServer((req, res) => {
   // Set CORS headers
-  res.setHeader('Access-Control-Allow-Origin', 'https://rajeshthangapandi.github.io/crud-app/');
+  res.setHeader('Access-Control-Allow-Origin', allowedOrigin);
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
   res.setHeader('Access-Control-Allow-Credentials', true);
