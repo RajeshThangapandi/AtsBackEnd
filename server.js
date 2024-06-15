@@ -5,7 +5,7 @@ const putReq = require('./methods/put-request');
 const deleteReq = require('./methods/delete-request');
 let movies = require('./data/movies.json');
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 9090;
 
 const server = http.createServer((req, res) => {
   // Set CORS headers
