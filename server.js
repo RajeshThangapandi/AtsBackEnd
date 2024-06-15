@@ -9,7 +9,7 @@ const PORT = 5001;
 
 const server = http.createServer((req, res) => {
   // Set CORS headers
-  res.setHeader('Access-Control-Allow-Origin', 'https://atsbackend-wv6o.onrender.com/applicant/');
+  res.setHeader('Access-Control-Allow-Origin', 'https://rajeshthangapandi.github.io/crud-app/');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
   res.setHeader('Access-Control-Allow-Credentials', true);
