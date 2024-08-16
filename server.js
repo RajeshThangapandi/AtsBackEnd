@@ -6,7 +6,7 @@ const deleteReq = require('./methods/delete-request');
 let movies = require('./data/movies.json');
 
 const PORT = 5001;
-const allowedOrigin = 'https://rajeshthangapandi.github.io'; // The correct origin
+const allowedOrigin = 'https://ats-new-beige.vercel.app/'; // The correct origin
 
 const server = http.createServer((req, res) => {
   // Set CORS headers
